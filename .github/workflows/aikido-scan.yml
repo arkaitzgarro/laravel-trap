@@ -9,4 +9,4 @@ jobs:
     steps: 
       - uses: actions/checkout@v4 
       - name: Run scan
-        run: aikido-local-scanner scan my-repo --apikey ${{ secrets.AIKIDO_API_KEY }} --repositoryname laravel-trap --branchname ${{ github.ref }}
+        run: aikido-local-scanner scan laravel-trap --apikey ${{ secrets.AIKIDO_API_KEY }} --repositoryname arkaitzgarro/laravel-trap --branchname ${{ github.ref }}
