@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: aikidosecurity/local-scanner:v1.0.21
-      with: 
-          path: laravel-trap
     steps: 
       - uses: actions/checkout@v4 
       - name: Run scan
-        run: aikido-local-scanner scan laravel-trap --apikey ${{ secrets.AIKIDO_API_KEY }} --repositoryname laravel-trap --branchname ${{ github.ref }}
+        run: aikido-local-scanner scan . --apikey ${{ secrets.AIKIDO_API_KEY }} --repositoryname laravel-trap --branchname ${{ github.ref }}
