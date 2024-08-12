@@ -1,5 +1,7 @@
 ​on:
-  push
+  push:
+    branches:
+      - '*'
 
 name: Aikido Scan
 jobs:
