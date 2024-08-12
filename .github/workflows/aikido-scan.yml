@@ -1,5 +1,4 @@
-​on:
-  push
+on: [push]
 
 name: Aikido Scan
 jobs:
@@ -10,4 +9,4 @@ jobs:
     steps: 
       - uses: actions/checkout@v4 
       - name: Run scan
-        run: aikido-local-scanner scan my-repo --apikey ${{ secrets.AIKIDO_API_KEY }} --repositoryname laravel-trap --branchname ${{ github.ref }}
+        run: aikido-local-scanner scan . --apikey ${{ secrets.AIKIDO_API_KEY }} --repositoryname laravel-trap --branchname ${{ github.ref }}
